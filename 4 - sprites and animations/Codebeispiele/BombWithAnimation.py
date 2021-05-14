@@ -8,7 +8,7 @@ def load_sliced_sprites(w, h, filename, max_sprites = float('inf')):
     master_image.set_colorkey((255, 0, 255))
     master_width, master_height = master_image.get_size()
 
-    amount_of_sprites = min(int((master_width - (padding_x*2)) / w), max_sprites)
+    amount_of_sprites = min(int((master_width - (padding_x*2)) / w), max_sprites) # padding_x ist nicht definiert
 
     for i in range(amount_of_sprites):
         images.append(master_image.subsurface((i * w, 0, w, h)))
